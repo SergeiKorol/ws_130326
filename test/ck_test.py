@@ -16,4 +16,4 @@ def test_put_complet_true():
     # Проверяем что completed ==True после изменения
     response = requests.get(f'https://todo-app-sky.herokuapp.com/{id}')
     assert response.status_code == 200
-    assert response.json()['completed'] == True
+    assert response.json()['completed'] == True, f'На самом деле значение {response.json()['completed']}'
